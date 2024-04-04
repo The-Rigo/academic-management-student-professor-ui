@@ -13,22 +13,22 @@ const menuGroupList = ref([
       {
         name:'Matriculación',
         value: 'matriculation',
-        route:'/matriculation'
+        route:'/student/matriculation'
       },
       {
         name:'Horario de clases',
         value: 'class-schedule',
-        route: '/class-schedule'
+        route: '/student/class-schedule'
       },
       {
         name:'Kardex',
         value: 'kardex',
-        route: '/kardex'
+        route: '/student/kardex'
       },
       {
         name:'Malla Curricular',
         value: 'curriculum',
-        route:'/curriculum'
+        route:'/student/curriculum'
       },
 
     ]
@@ -60,7 +60,7 @@ const menuGroupList = ref([
     <v-divider></v-divider>
 
     <v-list density="compact">
-      <v-list-item prepend-icon="mdi-home" title="Inicio" value="home" router to="/"/>
+      <v-list-item prepend-icon="mdi-home" title="Inicio" value="student" router to="/student"/>
       <v-list-group v-for="menuGroup in menuGroupList" :key="menuGroup.value" :value="menuGroup.value">
         <template v-slot:activator="{ props }">
           <v-list-item v-bind="props" :prepend-icon="menuGroup.icon" :title="menuGroup.name"></v-list-item>
@@ -74,6 +74,13 @@ const menuGroupList = ref([
         ></v-list-item>
       </v-list-group>
     </v-list>
+    <template v-slot:append>
+      <div class="pa-2" >
+        <v-btn block color="transparent" dark  style="background: linear-gradient(45deg, #001E89, #7D0000);" class="my-5">
+          <p style="color: white; text-align: center; font-weight: bold;">CERRAR SESIÓN</p>
+        </v-btn>
+      </div>
+    </template>
   </v-navigation-drawer>
 
 </template>
