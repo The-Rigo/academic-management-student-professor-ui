@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 
 const drawer = ref(true);
-const rail = ref(true);
+const rail = ref(false);
 
 const menuGroupList = ref([
   {
