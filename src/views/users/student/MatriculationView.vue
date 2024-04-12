@@ -27,7 +27,7 @@ const nextTab = () => {
 </script>
 
 <template>
-    <v-container >
+    <v-container>
       <v-card max-width="1200" variant="flat" class="mx-auto my-16">
       <v-tabs
         v-model="tab"
